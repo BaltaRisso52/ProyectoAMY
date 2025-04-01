@@ -191,11 +191,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\proyectos\\amy\\ProyectoAMY\\ProyectoAMY\\ProyectoAMY.csproj",
+      "projectUniqueName": "D:\\proyectos\\amy\\ProyectoAMY\\ProyectoAMY.csproj",
       "projectName": "ProyectoAMY",
-      "projectPath": "D:\\proyectos\\amy\\ProyectoAMY\\ProyectoAMY\\ProyectoAMY.csproj",
+      "projectPath": "D:\\proyectos\\amy\\ProyectoAMY\\ProyectoAMY.csproj",
       "packagesPath": "C:\\Users\\NEW GAME\\.nuget\\packages\\",
-      "outputPath": "D:\\proyectos\\amy\\ProyectoAMY\\ProyectoAMY\\obj\\",
+      "outputPath": "D:\\proyectos\\amy\\ProyectoAMY\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
