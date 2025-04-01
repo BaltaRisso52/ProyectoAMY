@@ -1,0 +1,8 @@
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\ProyectoAMY.exe
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\appsettings.Development.json
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\appsettings.json
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\ProyectoAMY.dll
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\ProyectoAMY.deps.json
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\ProyectoAMY.runtimeconfig.json
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\ProyectoAMY.pdb
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\publish\Npgsql.dll
