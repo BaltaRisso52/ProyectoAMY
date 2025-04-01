@@ -1,0 +1,37 @@
+@model AltaProductoViewModel
+
+<h2 style="text-align: center;">ALTA PRODUCTO</h2>
+
+
+<form asp-action="CrearProducto" method="post" enctype="multipart/form-data" class="form">
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre del Producto</label>
+        <input asp-for="Nombre" class="form-control" placeholder="Ingrese un nombre" required>
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Precio" class="form-label">Precio</label>
+        <input asp-for="Precio" class="form-control" placeholder="Ingrese el precio" required>
+        <span asp-validation-for="Precio" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripción</label>
+        <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="Máximo 100 caracteres"
+            style="resize: none;" required></textarea>
+        <span asp-validation-for="Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+            <label for="imagen">Seleccionar Imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Crear Producto</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

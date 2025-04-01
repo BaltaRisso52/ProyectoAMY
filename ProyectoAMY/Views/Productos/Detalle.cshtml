@@ -1,0 +1,22 @@
+@model producto
+
+@{
+    string numero = "5493816676655";
+    string mensaje = $"Hola, quiero comprar el producto: {Model.Nombre}";
+    string mensajeEncoded = Uri.EscapeDataString(mensaje);
+}
+
+<section class="detalle">
+    <figure class="img">
+        <img src="@Url.Content("~/imagenes/" + Model.Img)" alt="">
+    </figure>
+    <article>
+        <h2>@Model.Nombre</h2>
+        <p>$@Model.Precio</p>
+        <a href="https://wa.me/@(numero)?text=@(mensajeEncoded)" target="_blank">
+        Comprar por WhatsApp
+        </a>
+        <h3>Descripcion</h3>
+        <p>@Model.Descripcion</p>
+    </article>
+</section>

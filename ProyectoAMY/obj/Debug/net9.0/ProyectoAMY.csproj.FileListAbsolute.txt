@@ -17,7 +17,6 @@ D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ProyectoAMY.RazorAssem
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\scopedcss\bundle\ProyectoAMY.styles.css
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\scopedcss\projectbundle\ProyectoAMY.bundle.scp.css
-D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\compressed\sc93705msw-b9sayid5wm.gz
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\compressed\qt9s8et58g-61n19gt1b8.gz
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\compressed\zvlgihau5x-xtxxf3hu2r.gz
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\compressed\qcwqeco0kk-bqjiyaj88i.gz
@@ -95,3 +94,8 @@ D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\refint\ProyectoAMY.dll
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ProyectoAMY.pdb
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ProyectoAMY.genruntimeconfig.cache
 D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ref\ProyectoAMY.dll
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\bin\Debug\net9.0\Npgsql.dll
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ProyectoAMY.csproj.AssemblyReference.cache
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\ProyectoAMY.sourcelink.json
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\Proyecto.425F9F76.Up2Date
+D:\proyectos\amy\ProyectoAMY\ProyectoAMY\obj\Debug\net9.0\compressed\sc93705msw-nm8fhpg4fi.gz

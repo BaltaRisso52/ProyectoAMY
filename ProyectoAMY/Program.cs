@@ -3,6 +3,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var connectionString = builder.Configuration.GetConnectionString(
+"SqliteConexion")!.ToString();
+builder.Services.AddSingleton<string>(connectionString);
+
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,7 +28,7 @@ app.MapStaticAssets();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
+    pattern: "{controller=Productos}/{action=Index}/{id?}")
     .WithStaticAssets();
 
 

@@ -1,0 +1,24 @@
+@model producto
+
+<h2 style="text-align: center;">Eliminar Producto</h2>
+
+<div class="card border-danger mb-3">
+    <div class="card-header bg-danger text-white" style="text-align: center;">Producto a eliminar</div>
+    <div class="card-body" style="text-align: center;color: black;">
+        <h5 class="card-title"><strong>Nombre:</strong> @Model.Nombre</h5>
+        <p class="card-text"><strong>Descripción:</strong> @Model.Descripcion</p>
+    </div>
+</div>
+
+<div class="alert alert-warning" style="width: 50%;margin: 0 auto;text-align: center;">
+    <p>¿Estás seguro de que deseas eliminar esta prooducto?</p>
+    <p><strong>Esta acción no se puede deshacer.</strong></p>
+</div>
+
+<form asp-action="EliminarProductoOK" method="post"
+    style="width: 15%;display: flex;flex-direction: column;margin: 1em auto;">
+    <input type="hidden" asp-for="IdProducto" />
+
+    <button type="submit" class="btn btn-danger" style="margin-bottom: 0.5em;">Eliminar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();">Cancelar</button>
+</form>
