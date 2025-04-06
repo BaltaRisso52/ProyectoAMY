@@ -1,0 +1,16 @@
+D:\proyectos\amy\ProyectoAMY\out\ProyectoAMY.exe
+D:\proyectos\amy\ProyectoAMY\out\publish\web.config
+D:\proyectos\amy\ProyectoAMY\out\appsettings.Development.json
+D:\proyectos\amy\ProyectoAMY\out\appsettings.json
+D:\proyectos\amy\ProyectoAMY\out\publish\appsettings.Development.json
+D:\proyectos\amy\ProyectoAMY\out\publish\appsettings.json
+D:\proyectos\amy\ProyectoAMY\out\publish\ProyectoAMY.deps.json
+D:\proyectos\amy\ProyectoAMY\out\publish\ProyectoAMY.runtimeconfig.json
+D:\proyectos\amy\ProyectoAMY\out\publish\ProyectoAMY.staticwebassets.endpoints.json
+D:\proyectos\amy\ProyectoAMY\out\ProyectoAMY.dll
+D:\proyectos\amy\ProyectoAMY\out\ProyectoAMY.deps.json
+D:\proyectos\amy\ProyectoAMY\out\ProyectoAMY.runtimeconfig.json
+D:\proyectos\amy\ProyectoAMY\out\ProyectoAMY.pdb
+D:\proyectos\amy\ProyectoAMY\out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\proyectos\amy\ProyectoAMY\out\Microsoft.Extensions.Logging.Abstractions.dll
+D:\proyectos\amy\ProyectoAMY\out\Npgsql.dll

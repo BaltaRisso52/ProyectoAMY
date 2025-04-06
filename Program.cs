@@ -1,11 +1,15 @@
+using Npgsql;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+var algo = new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+
 var connectionString = builder.Configuration.GetConnectionString(
 "SqliteConexion")!.ToString();
-builder.Services.AddSingleton<string>(connectionString);
+builder.Services.AddSingleton<string>(algo);
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
@@ -20,16 +24,15 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Productos}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Productos}/{action=Index}/{id?}");
 
 
 app.Run();

@@ -1,0 +1,345 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProyectoAMY.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ProyectoAMY.ww2ha8jhgf.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\0a85b589-b8b4-46ce-98ec-0a8823af5ac1.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\0a85b589-b8b4-46ce-98ec-0a8823af5ac1.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\1f129b89-4d55-41af-b21f-fe2989c7dd6a.png",
+      "PackagePath": "staticwebassets\\imagenes\\1f129b89-4d55-41af-b21f-fe2989c7dd6a.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\4468ac02-fb3e-4858-bd57-141290d999ff.png",
+      "PackagePath": "staticwebassets\\imagenes\\4468ac02-fb3e-4858-bd57-141290d999ff.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\495377fe-0221-4fa1-bc46-efa62b49e039.png",
+      "PackagePath": "staticwebassets\\imagenes\\495377fe-0221-4fa1-bc46-efa62b49e039.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\5c76c19f-c029-46c5-b48a-f0266960a879.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\5c76c19f-c029-46c5-b48a-f0266960a879.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\6791a1fd-84bc-40de-be79-27c5e0d2fecc.png",
+      "PackagePath": "staticwebassets\\imagenes\\6791a1fd-84bc-40de-be79-27c5e0d2fecc.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\716d4ec9-9b3c-4447-8314-806ddd6924f6.png",
+      "PackagePath": "staticwebassets\\imagenes\\716d4ec9-9b3c-4447-8314-806ddd6924f6.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\99845ade-88ee-4a92-9563-c60d7a93276d.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\99845ade-88ee-4a92-9563-c60d7a93276d.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\buscar.png",
+      "PackagePath": "staticwebassets\\imagenes\\buscar.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\f285e66d-4c50-4a6b-8703-b0179b50422c.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\f285e66d-4c50-4a6b-8703-b0179b50422c.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\flecha-anterior.png",
+      "PackagePath": "staticwebassets\\imagenes\\flecha-anterior.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\flecha-siguiente.png",
+      "PackagePath": "staticwebassets\\imagenes\\flecha-siguiente.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\instagramLogo.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\instagramLogo.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\whatsappLogo.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\whatsappLogo.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.js"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProyectoAMY.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProyectoAMY.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProyectoAMY.props",
+      "PackagePath": "build\\ProyectoAMY.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProyectoAMY.props",
+      "PackagePath": "buildMultiTargeting\\ProyectoAMY.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProyectoAMY.props",
+      "PackagePath": "buildTransitive\\ProyectoAMY.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
