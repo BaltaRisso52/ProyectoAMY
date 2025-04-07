@@ -35,7 +35,7 @@ public class ProductoRepository : IProductoRepository
 
         producto producto = null;
 
-        string consulta = @"SELECT * FROM producto WHERE id_producto = @id;";
+        string consulta = @"SELECT * FROM producto WHERE id = @id;";
 
         using (var connection = new NpgsqlConnection(_ConnectionString))
         {
@@ -51,7 +51,7 @@ public class ProductoRepository : IProductoRepository
                 {
                     producto = new producto();
 
-                    producto.IdProducto = Convert.ToInt32(reader["id_producto"]);
+                    producto.IdProducto = Convert.ToInt32(reader["id"]);
                     producto.Nombre = reader["nombre"].ToString();
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
@@ -87,7 +87,7 @@ public class ProductoRepository : IProductoRepository
                 {
                     producto producto = new();
 
-                    producto.IdProducto = Convert.ToInt32(reader["id_producto"]);
+                    producto.IdProducto = Convert.ToInt32(reader["id"]);
                     producto.Nombre = reader["nombre"].ToString();
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
@@ -122,7 +122,7 @@ public class ProductoRepository : IProductoRepository
                 {
                     producto producto = new();
 
-                    producto.IdProducto = Convert.ToInt32(reader["id_producto"]);
+                    producto.IdProducto = Convert.ToInt32(reader["id"]);
                     producto.Nombre = reader["nombre"].ToString();
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
@@ -141,7 +141,7 @@ public class ProductoRepository : IProductoRepository
     public void eliminarProductoPorId(int id)
     {
 
-        string consulta = @"DELETE FROM producto WHERE id_producto = @id;";
+        string consulta = @"DELETE FROM producto WHERE id = @id;";
 
         using (var connection = new NpgsqlConnection(_ConnectionString))
         {
