@@ -50,6 +50,7 @@ builder.Services.AddSingleton(new Cloudinary(new Account(
 )));
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 
 var app = builder.Build();
 
