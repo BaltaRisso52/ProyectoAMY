@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var algo = Environment.GetEnvironmentVariable("Postgres.DATABASE_URL")
+var algo = Environment.GetEnvironmentVariable("DATABASE_URL")
                       ?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
 
 
