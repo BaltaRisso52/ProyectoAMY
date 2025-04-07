@@ -5,13 +5,41 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var algo = Environment.GetEnvironmentVariable("DATABASE_URL")
-                      ?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
+string connectionString;
 
-var connectionString = builder.Configuration.GetConnectionString(
-"SqliteConexion")!.ToString();
-builder.Services.AddSingleton<string>(algo);
+if (string.IsNullOrEmpty(databaseUrl))
+{
+    // Local con Sqlite
+    connectionString = new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+}
+else
+{
+    // Railway con Postgres
+    var uri = new Uri(databaseUrl);
+    var userInfo = uri.UserInfo.Split(':');
+
+    var builderPostgres = new Npgsql.NpgsqlConnectionStringBuilder
+    {
+        Host = uri.Host,
+        Port = uri.Port,
+        Username = userInfo[0],
+        Password = userInfo[1],
+        Database = uri.AbsolutePath.Trim('/'),
+        SslMode = Npgsql.SslMode.Require,
+        TrustServerCertificate = true
+    };
+
+    connectionString = builderPostgres.ToString();
+}
+
+// var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL").ToString()
+//                       ?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+
+// var connectionString = builder.Configuration.GetConnectionString(
+// "SqliteConexion")!.ToString();
+builder.Services.AddSingleton<string>(connectionString);
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 
