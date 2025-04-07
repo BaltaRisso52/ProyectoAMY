@@ -1,3 +1,4 @@
+using CloudinaryDotNet;
 using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,6 +41,13 @@ else
 // var connectionString = builder.Configuration.GetConnectionString(
 // "SqliteConexion")!.ToString();
 builder.Services.AddSingleton<string>(connectionString);
+builder.Services.AddSingleton<CloudinaryService>();
+
+builder.Services.AddSingleton(new Cloudinary(new Account(
+    builder.Configuration["Cloudinary:CloudName"],
+    builder.Configuration["Cloudinary:ApiKey"],
+    builder.Configuration["Cloudinary:ApiSecret"]
+)));
 
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 

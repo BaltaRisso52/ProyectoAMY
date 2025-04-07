@@ -4,10 +4,12 @@ public class ProductosController : Controller
 {
 
     private readonly IProductoRepository productoRepository;
+    private readonly ICloudinaryService _cloudinaryService;
 
-    public ProductosController(IProductoRepository productoRepository)
+    public ProductosController(IProductoRepository productoRepository, ICloudinaryService cloudinaryService)
     {
         this.productoRepository = productoRepository;
+        _cloudinaryService = cloudinaryService;
     }
 
     public ActionResult Index()
@@ -22,40 +24,20 @@ public class ProductosController : Controller
     }
 
     [HttpPost]
-    public ActionResult CrearProducto(AltaProductoViewModel producto, IFormFile imagen)
+    public async Task<IActionResult> CrearProducto(AltaProductoViewModel producto, IFormFile imagen)
     {
 
         if (imagen != null && imagen.Length > 0)
         {
-            // Generar un nombre único para la imagen
-            var fileName = Path.GetFileName(imagen.FileName);
-            var fileExtension = Path.GetExtension(imagen.FileName);
-            var uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
 
-            // Definir la ruta donde se guardará la imagen
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagenes", uniqueFileName);
+            var urlImagen = await _cloudinaryService.SubirImagenAsync(imagen);
 
-            // Guardar la imagen en el servidor
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                imagen.CopyTo(fileStream);
-            }
-
-            // Guardar el nombre de la imagen en la base de datos
-            producto.Img = uniqueFileName;
-
-            // Aquí agregarías el código para guardar el producto en la base de datos
-            // por ejemplo:
-            // _productoRepository.AgregarProducto(producto);
+            producto.Img = urlImagen;
 
             productoRepository.crearProducto(producto);
-
-            TempData["Mensaje"] = "Producto creado con éxito";
-
         }
 
         return RedirectToAction("Index");
-
 
     }
 
