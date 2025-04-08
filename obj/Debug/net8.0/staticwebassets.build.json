@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hl+wKApyW6T7Wj+Q8qI9qgRjlZqS8RW3GF528Q0WpjI=",
+  "Hash": "aOtIEefmHxdg8BAcClQnAhkzpBD2PHFBnZlWGioLlnU=",
   "Source": "ProyectoAMY",
   "BasePath": "_content/ProyectoAMY",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t89417dxww",
-      "Integrity": "zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=",
+      "Fingerprint": "1z0dsbixun",
+      "Integrity": "LU7LNIql/R0oXbdaHW3W+4FtjUSUR1W1Zz7fDv5aWc8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1762,6 +1762,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.1z0dsbixun.css",
+      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LU7LNIql/R0oXbdaHW3W+4FtjUSUR1W1Zz7fDv5aWc8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 00:15:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1z0dsbixun"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LU7LNIql/R0oXbdaHW3W+4FtjUSUR1W1Zz7fDv5aWc8="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1772,7 +1817,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4499"
+          "Value": "4660"
         },
         {
           "Name": "Content-Type",
@@ -1780,11 +1825,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=\""
+          "Value": "\"LU7LNIql/R0oXbdaHW3W+4FtjUSUR1W1Zz7fDv5aWc8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 00:04:40 GMT"
+          "Value": "Tue, 08 Apr 2025 00:15:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1794,52 +1839,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.t89417dxww.css",
-      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4499"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 00:04:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "t89417dxww"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs="
+          "Value": "sha256-LU7LNIql/R0oXbdaHW3W+4FtjUSUR1W1Zz7fDv5aWc8="
         }
       ]
     },
