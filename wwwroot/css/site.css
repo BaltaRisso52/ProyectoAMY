@@ -1,0 +1,295 @@
+* {
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  header a {
+    padding: 1em;
+    font-size: 1.2em !important;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+  text-align: start;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  width: 10em;
+  margin: 0 auto !important;
+}
+
+
+
+footer section {
+  width: 70%;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+footer a img {
+  width: 100%;
+}
+
+.productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.producto {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 1em !important;
+  transition: border-bottom 0.1s;
+}
+
+.producto:hover {
+  border-bottom: 0.3em solid rgb(101, 175, 163) !important;
+}
+
+.img img {
+  width: 100%;
+}
+
+.LogoEmprendimiento {
+  width: 7.5em ;
+}
+
+.section-inicio {
+  background-color: rgb(101, 175, 163);
+  padding: 0.5em !important;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white;
+  margin-top: 1em !important;
+  width: 65% !important;
+  margin: 1em auto !important;
+}
+
+.ubi-footer img {
+  width: 2em !important;
+  height: 2em !important;
+}
+
+.ubi-footer {
+  display: flex;
+  margin: 0 auto !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-eliminar{
+  text-align: center;
+  width: 40% !important;
+  margin: 1em auto !important;
+}
+
+
+@media (max-width: 576px) {
+  .producto {
+    width: 100%;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .detalle article {
+    margin-left: 1em !important;
+  }
+
+  .carousel {
+    width: 100% !important;
+  }
+
+  .section-inicio {
+    width: 100% !important;
+  }
+
+  .section-eliminar{
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .form {
+    width: 60% !important;
+    margin: 1em auto !important;
+    border: 1px solid black !important;
+    padding: 0.7em !important;
+  }
+
+  .producto {
+    width: 27%;
+  }
+
+  .productos {
+    margin: 1em !important;
+  }
+
+  .img {
+    width: 50%;
+    padding: 2em !important;
+    border-right: 1px solid rgba(185, 176, 176, 0.979) !important;
+  }
+
+  .detalle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .detalle article {
+    margin-left: 1em !important;
+  }
+
+  .nav-inicio {
+    transition: border-bottom 0.1s;
+  }
+
+  .nav-inicio:hover {
+    border-bottom: 0.2em solid rgb(101, 175, 163) !important;
+  }
+}
+
+.producto img {
+  width: 100%;
+}
+
+.footer {
+  position: static !important;
+}
+
+.paginacion {
+  text-align: center;
+}
+
+.paginacion img {
+  width: 2em;
+}
+
+.menu-item {
+  padding: 0.5em !important;
+}
+
+header {
+  padding: 0.5em !important;
+}
+
+input[type="search"] {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  /* Borde normal para que no se vea raro */
+  transition: border-bottom 0s ease-in-out;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 0.2em solid rgb(101, 175, 163) !important;
+}
+
+input[type="search"]:hover {
+  border-bottom: 0.15em solid rgb(101, 175, 163) !important;
+}
+
+.buscador {
+  width: 1.5em !important;
+}
+
+.zoom {
+  transition: opacity 0.3s;
+}
+
+.zoom:hover {
+  opacity: 0.75;
+}
+
+.carousel {
+  position: relative;
+  width: 60%;
+  margin: 0.5em auto !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.carousel-inner img.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
