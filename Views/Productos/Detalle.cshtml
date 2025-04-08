@@ -14,9 +14,13 @@
         <h2>@Model.Nombre</h2>
         <p>$@Model.Precio</p>
         <a href="https://wa.me/@(numero)?text=@(mensajeEncoded)" target="_blank">
-        Comprar por WhatsApp
+            Comprar por WhatsApp
         </a>
         <h3>Descripcion</h3>
         <p>@Model.Descripcion</p>
+        @if (ViewData["EsAdmin"] is not null && (bool)ViewData["EsAdmin"])
+        {
+                <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar Producto</a>
+        }
     </article>
 </section>

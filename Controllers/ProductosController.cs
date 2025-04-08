@@ -14,18 +14,31 @@ public class ProductosController : Controller
 
     public ActionResult Index()
     {
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
+
+
         return View();
     }
 
     [HttpGet]
     public ActionResult AltaProducto()
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            return RedirectToAction("Index", "Login");
+
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
+
         return View();
     }
 
     [HttpPost]
     public async Task<IActionResult> CrearProducto(AltaProductoViewModel producto, IFormFile imagen)
     {
+
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            return RedirectToAction("Index", "Login");
 
         if (imagen != null && imagen.Length > 0)
         {
@@ -44,6 +57,11 @@ public class ProductosController : Controller
     [HttpGet]
     public ActionResult EliminarProducto(int id)
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            return RedirectToAction("Index", "Login");
+
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
 
         producto model = productoRepository.obtenerProductoPorId(id);
 
@@ -58,6 +76,9 @@ public class ProductosController : Controller
     [HttpPost]
     public ActionResult EliminarProductoOK(int IdProducto)
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            return RedirectToAction("Index", "Login");
+
 
         producto model = productoRepository.obtenerProductoPorId(IdProducto);
 
@@ -74,6 +95,10 @@ public class ProductosController : Controller
     [HttpGet]
     public ActionResult Detalle(int id)
     {
+
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
+
         producto model = productoRepository.obtenerProductoPorId(id);
 
         if (model is null)
@@ -87,6 +112,9 @@ public class ProductosController : Controller
     [HttpGet]
     public ActionResult Buscar(string nombre, int pagina = 1, int tamanoPagina = 9)
     {
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
+
 
         int totalProductos = productoRepository.BuscarProducto(nombre).Count;
         var productos = productoRepository.BuscarProducto(nombre)
@@ -105,7 +133,9 @@ public class ProductosController : Controller
     [HttpGet]
     public ActionResult ListaProductos(int pagina = 1, int tamanoPagina = 9)
     {
-
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+            ViewData["EsAdmin"] = true;
+        
         int totalProductos = productoRepository.ListarProductos().Count;
         var productos = productoRepository.ListarProductos()
             .OrderBy(p => p.Nombre) // Ordenar por nombre, puedes cambiarlo

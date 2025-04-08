@@ -1,0 +1,26 @@
+@model LoginViewModel
+
+<!-- Mostrar mensaje de error si existe -->
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}
+
+@if (@Model.IsAuthenticated)
+{
+    <span class="nav-link text-dark me-3">Bienvenido @Model.Username</span>
+    <a class="nav-link" href="@Url.Action("Logout", "Login")">Cerrar Sesión</a>
+}
+else
+{
+    <form method="post" asp-action="Login" class="login-form">
+        <input type="text" class="login-username" id="username" name="username" value="@Model.Username" autofocus="true"
+            required="true" placeholder="Usuario" />
+        <input type="password" class="login-password" id="password" name="password" required="true"
+            placeholder="Password" />
+        <button type="submit" class="login-submit" style="padding: 0.5em;">Iniciar Sesion</button>
+
+    </form>
+}

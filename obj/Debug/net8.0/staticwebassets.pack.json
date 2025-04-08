@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\imagenes\\99845ade-88ee-4a92-9563-c60d7a93276d.jpg"
     },
     {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\Logo.jpg"
+    },
+    {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\buscar.png",
       "PackagePath": "staticwebassets\\imagenes\\buscar.png"
     },
@@ -71,6 +75,10 @@
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\instagramLogo.jpg",
       "PackagePath": "staticwebassets\\imagenes\\instagramLogo.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\ubicacion.png",
+      "PackagePath": "staticwebassets\\imagenes\\ubicacion.png"
     },
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\whatsappLogo.jpg",

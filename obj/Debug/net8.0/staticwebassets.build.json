@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5U39KK9EGUl5T6KKdSqH2/3vSbWsc+CcgLwQKDLIYj0=",
+  "Hash": "hl+wKApyW6T7Wj+Q8qI9qgRjlZqS8RW3GF528Q0WpjI=",
   "Source": "ProyectoAMY",
   "BasePath": "_content/ProyectoAMY",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nm8fhpg4fi",
-      "Integrity": "b475XY6oMWBHNjaSLN1DK1VIEPOnO7R78XROjcmLUNk=",
+      "Fingerprint": "t89417dxww",
+      "Integrity": "zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -416,6 +416,48 @@
       "OriginalItemSpec": "wwwroot\\imagenes\\instagramLogo.jpg"
     },
     {
+      "Identity": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
+      "SourceId": "ProyectoAMY",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\",
+      "BasePath": "_content/ProyectoAMY",
+      "RelativePath": "imagenes/Logo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "anr7llt1ku",
+      "Integrity": "tkBuBl++C8BXc422KLGr3s2cV5UhzsOB2fBF2+lWgoM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Logo.jpg"
+    },
+    {
+      "Identity": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\ubicacion.png",
+      "SourceId": "ProyectoAMY",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\",
+      "BasePath": "_content/ProyectoAMY",
+      "RelativePath": "imagenes/ubicacion#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yhvectg44a",
+      "Integrity": "CkkH3Ffk9bCXFsLfPnZdriVQtyRs3gFpkXL/zNqYZr0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\ubicacion.png"
+    },
+    {
       "Identity": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\whatsappLogo.jpg",
       "SourceId": "ProyectoAMY",
       "SourceType": "Discovered",
@@ -451,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xtxxf3hu2r",
-      "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+      "Fingerprint": "y6lsxydf3k",
+      "Integrity": "toxHmT+XhIuRZkgMkCWlimBSVmaDbnmon2JzQk3lNKE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1730,7 +1772,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3100"
+          "Value": "4499"
         },
         {
           "Name": "Content-Type",
@@ -1738,11 +1780,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b475XY6oMWBHNjaSLN1DK1VIEPOnO7R78XROjcmLUNk=\""
+          "Value": "\"zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 16:08:14 GMT"
+          "Value": "Tue, 08 Apr 2025 00:04:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1752,12 +1794,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b475XY6oMWBHNjaSLN1DK1VIEPOnO7R78XROjcmLUNk="
+          "Value": "sha256-zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs="
         }
       ]
     },
     {
-      "Route": "css/site.nm8fhpg4fi.css",
+      "Route": "css/site.t89417dxww.css",
       "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1767,7 +1809,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3100"
+          "Value": "4499"
         },
         {
           "Name": "Content-Type",
@@ -1775,11 +1817,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b475XY6oMWBHNjaSLN1DK1VIEPOnO7R78XROjcmLUNk=\""
+          "Value": "\"zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 16:08:14 GMT"
+          "Value": "Tue, 08 Apr 2025 00:04:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1789,7 +1831,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nm8fhpg4fi"
+          "Value": "t89417dxww"
         },
         {
           "Name": "label",
@@ -1797,7 +1839,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b475XY6oMWBHNjaSLN1DK1VIEPOnO7R78XROjcmLUNk="
+          "Value": "sha256-zTRx3qUV9iRbowUtsAkz/KCYmm7raLDWRsMvpfbcWjs="
         }
       ]
     },
@@ -3114,6 +3156,170 @@
       ]
     },
     {
+      "Route": "imagenes/Logo.anr7llt1ku.jpg",
+      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14084"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tkBuBl++C8BXc422KLGr3s2cV5UhzsOB2fBF2+lWgoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 20:22:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "anr7llt1ku"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Logo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tkBuBl++C8BXc422KLGr3s2cV5UhzsOB2fBF2+lWgoM="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Logo.jpg",
+      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14084"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tkBuBl++C8BXc422KLGr3s2cV5UhzsOB2fBF2+lWgoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 20:22:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tkBuBl++C8BXc422KLGr3s2cV5UhzsOB2fBF2+lWgoM="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/ubicacion.png",
+      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\ubicacion.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8556"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CkkH3Ffk9bCXFsLfPnZdriVQtyRs3gFpkXL/zNqYZr0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 22:34:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CkkH3Ffk9bCXFsLfPnZdriVQtyRs3gFpkXL/zNqYZr0="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/ubicacion.yhvectg44a.png",
+      "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\ubicacion.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8556"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CkkH3Ffk9bCXFsLfPnZdriVQtyRs3gFpkXL/zNqYZr0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 22:34:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yhvectg44a"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/ubicacion.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CkkH3Ffk9bCXFsLfPnZdriVQtyRs3gFpkXL/zNqYZr0="
+        }
+      ]
+    },
+    {
       "Route": "imagenes/whatsappLogo.bvnifruh4i.jpg",
       "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\whatsappLogo.jpg",
       "Selectors": [],
@@ -3206,7 +3412,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "868"
         },
         {
           "Name": "Content-Type",
@@ -3214,11 +3420,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"toxHmT+XhIuRZkgMkCWlimBSVmaDbnmon2JzQk3lNKE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 22:02:18 GMT"
+          "Value": "Mon, 07 Apr 2025 21:25:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3228,12 +3434,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-toxHmT+XhIuRZkgMkCWlimBSVmaDbnmon2JzQk3lNKE="
         }
       ]
     },
     {
-      "Route": "js/site.xtxxf3hu2r.js",
+      "Route": "js/site.y6lsxydf3k.js",
       "AssetFile": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3243,7 +3449,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "231"
+          "Value": "868"
         },
         {
           "Name": "Content-Type",
@@ -3251,11 +3457,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=\""
+          "Value": "\"toxHmT+XhIuRZkgMkCWlimBSVmaDbnmon2JzQk3lNKE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 22:02:18 GMT"
+          "Value": "Mon, 07 Apr 2025 21:25:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3265,7 +3471,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xtxxf3hu2r"
+          "Value": "y6lsxydf3k"
         },
         {
           "Name": "label",
@@ -3273,7 +3479,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo="
+          "Value": "sha256-toxHmT+XhIuRZkgMkCWlimBSVmaDbnmon2JzQk3lNKE="
         }
       ]
     },

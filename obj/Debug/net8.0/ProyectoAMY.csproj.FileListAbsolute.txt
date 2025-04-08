@@ -55,3 +55,5 @@ D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\out\publish\appsettings.json
 D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\out\publish\ProyectoAMY.deps.json
 D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\out\publish\ProyectoAMY.runtimeconfig.json
 D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\out\publish\ProyectoAMY.staticwebassets.endpoints.json
+D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\proyectos\amy\ProyectoAMY\bin\Debug\net8.0\Newtonsoft.Json.dll

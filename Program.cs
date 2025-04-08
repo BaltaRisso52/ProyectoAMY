@@ -3,6 +3,13 @@ using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Tiempo de expiración de la sesión
+    options.Cookie.HttpOnly = true; // Solo accesible desde HTTP, no JavaScript
+    options.Cookie.IsEssential = true; // Necesario incluso si el usuario no acepta cookies
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -12,7 +19,7 @@ string connectionString;
 
 if (string.IsNullOrEmpty(databaseUrl))
 {
-    // Local con Sqlite
+    // Local con Postgres
     connectionString = new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
 }
 else
@@ -35,13 +42,7 @@ else
     connectionString = builderPostgres.ToString();
 }
 
-// var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL").ToString()
-//                       ?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
-
-// var connectionString = builder.Configuration.GetConnectionString(
-// "SqliteConexion")!.ToString();
 builder.Services.AddSingleton<string>(connectionString);
-builder.Services.AddSingleton<CloudinaryService>();
 
 builder.Services.AddSingleton(new Cloudinary(new Account(
     builder.Configuration["Cloudinary:CloudName"],
@@ -49,10 +50,16 @@ builder.Services.AddSingleton(new Cloudinary(new Account(
     builder.Configuration["Cloudinary:ApiSecret"]
 )));
 
+builder.Services.AddSingleton<CloudinaryService>();
+
+
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 
 var app = builder.Build();
+
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

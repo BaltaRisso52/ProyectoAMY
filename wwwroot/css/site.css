@@ -88,18 +88,50 @@ footer a img {
   text-decoration: none;
   color: black;
   margin-bottom: 1em !important;
-  transition: border-bottom 50s;
+  transition: border-bottom 0.1s;
 }
 
 .producto:hover {
-  border-bottom: 1px solid black !important;
+  border-bottom: 0.3em solid rgb(101, 175, 163) !important;
 }
 
 .img img {
   width: 100%;
 }
 
+.LogoEmprendimiento {
+  width: 7.5em;
+}
 
+.section-inicio {
+  background-color: rgb(101, 175, 163);
+  padding: 0.5em !important;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white;
+  margin-top: 1em !important;
+  width: 65% !important;
+  margin: 1em auto !important;
+}
+
+.ubi-footer img {
+  width: 2em !important;
+  height: 2em !important;
+}
+
+.ubi-footer {
+  display: flex;
+  margin: 0 auto !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-eliminar{
+  text-align: center;
+  width: 40% !important;
+  margin: 1em auto !important;
+}
 
 
 @media (max-width: 576px) {
@@ -113,6 +145,18 @@ footer a img {
 
   .detalle article {
     margin-left: 1em !important;
+  }
+
+  .carousel {
+    width: 100% !important;
+  }
+
+  .section-inicio {
+    width: 100% !important;
+  }
+
+  .section-eliminar{
+    width: 100% !important;
   }
 }
 
@@ -147,6 +191,14 @@ footer a img {
   .detalle article {
     margin-left: 1em !important;
   }
+
+  .nav-inicio {
+    transition: border-bottom 0.1s;
+  }
+
+  .nav-inicio:hover {
+    border-bottom: 0.2em solid rgb(101, 175, 163) !important;
+  }
 }
 
 .producto img {
@@ -178,17 +230,17 @@ input[type="search"] {
   box-shadow: none;
   border: 1px solid #ccc;
   /* Borde normal para que no se vea raro */
-  transition: border-bottom 5s ease-in-out;
+  transition: border-bottom 0s ease-in-out;
 }
 
 input[type="search"]:focus {
   outline: none;
   box-shadow: none;
-  border-bottom: 1px solid black !important;
+  border-bottom: 0.2em solid rgb(101, 175, 163) !important;
 }
 
 input[type="search"]:hover {
-  border-bottom: 1px solid black !important;
+  border-bottom: 0.15em solid rgb(101, 175, 163) !important;
 }
 
 .buscador {
@@ -201,4 +253,43 @@ input[type="search"]:hover {
 
 .zoom:hover {
   opacity: 0.75;
+}
+
+.carousel {
+  position: relative;
+  width: 60%;
+  margin: 0.5em auto !important;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.carousel-inner img.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
