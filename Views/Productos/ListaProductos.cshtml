@@ -8,8 +8,10 @@
             <a href="@Url.Action("Detalle", "Productos", new { id = producto.IdProducto })" class="producto">
                 <div>
                     <img src="@producto.Img" alt="" class="zoom">
-                    <h3>@producto.Nombre</h3>
-                    <p><strong>$@producto.Precio</strong> </p>
+                    <section>
+                        <h3 class="Chonburi">@producto.Nombre</h3>
+                        <p class="Chonburi">$@producto.Precio</p>
+                    </section>
                 </div>
             </a>
         }

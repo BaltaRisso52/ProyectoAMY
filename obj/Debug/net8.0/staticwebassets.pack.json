@@ -13,56 +13,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\0a85b589-b8b4-46ce-98ec-0a8823af5ac1.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\0a85b589-b8b4-46ce-98ec-0a8823af5ac1.jpg"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\1f129b89-4d55-41af-b21f-fe2989c7dd6a.png",
-      "PackagePath": "staticwebassets\\imagenes\\1f129b89-4d55-41af-b21f-fe2989c7dd6a.png"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\4468ac02-fb3e-4858-bd57-141290d999ff.png",
-      "PackagePath": "staticwebassets\\imagenes\\4468ac02-fb3e-4858-bd57-141290d999ff.png"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\495377fe-0221-4fa1-bc46-efa62b49e039.png",
-      "PackagePath": "staticwebassets\\imagenes\\495377fe-0221-4fa1-bc46-efa62b49e039.png"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\5c76c19f-c029-46c5-b48a-f0266960a879.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\5c76c19f-c029-46c5-b48a-f0266960a879.jpg"
-    },
-    {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg",
       "PackagePath": "staticwebassets\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\6791a1fd-84bc-40de-be79-27c5e0d2fecc.png",
-      "PackagePath": "staticwebassets\\imagenes\\6791a1fd-84bc-40de-be79-27c5e0d2fecc.png"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\716d4ec9-9b3c-4447-8314-806ddd6924f6.png",
-      "PackagePath": "staticwebassets\\imagenes\\716d4ec9-9b3c-4447-8314-806ddd6924f6.png"
     },
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg",
       "PackagePath": "staticwebassets\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\99845ade-88ee-4a92-9563-c60d7a93276d.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\99845ade-88ee-4a92-9563-c60d7a93276d.jpg"
-    },
-    {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
       "PackagePath": "staticwebassets\\imagenes\\Logo.jpg"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\buscar.png",
-      "PackagePath": "staticwebassets\\imagenes\\buscar.png"
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\bazar1.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\bazar1.jpg"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\f285e66d-4c50-4a6b-8703-b0179b50422c.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\f285e66d-4c50-4a6b-8703-b0179b50422c.jpg"
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\bazar2.webp",
+      "PackagePath": "staticwebassets\\imagenes\\bazar2.webp"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\buscar.png",
+      "PackagePath": "staticwebassets\\imagenes\\buscar.png"
     },
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\flecha-anterior.png",

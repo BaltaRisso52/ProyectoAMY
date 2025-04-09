@@ -70,7 +70,7 @@ public class ProductoRepository : IProductoRepository
 
         List<producto> productos = new();
 
-        string consulta = @"SELECT * FROM producto WHERE nombre LIKE @producto;";
+        string consulta = @"SELECT * FROM producto WHERE nombre ILIKE @producto;";
 
         using (var connection = new NpgsqlConnection(_ConnectionString))
         {

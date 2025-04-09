@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProyectoAMY.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +23,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="flex-grow: 0;">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1 Chonburi">
                         <li class="menu-item">
                             <form class="d-sm-none d-xs-flex" asp-controller="Productos" asp-action="Buscar"
                                 method="get">
@@ -45,7 +48,8 @@
                         @if (ViewData["EsAdmin"] is not null && (bool)ViewData["EsAdmin"])
                         {
                             <li class="nav-item menu-item">
-                                <a class="nav-link text-dark nav-inicio" href="@Url.Action("AltaProducto", "Productos")">Alta Producto</a>
+                                <a class="nav-link text-dark nav-inicio"
+                                    href="@Url.Action("AltaProducto", "Productos")">Alta Producto</a>
                             </li>
                         }
                     </ul>
@@ -76,7 +80,7 @@
         <section>
             <ul>
                 <li>
-                    <a href="https://wa.me/3813999608" target="_blank"><img
+                    <a href="https://wa.me/5493813999608" target="_blank"><img
                             src="@Url.Content("~/imagenes/whatsappLogo.jpg")" alt=""></a>
                 </li>
                 <li>

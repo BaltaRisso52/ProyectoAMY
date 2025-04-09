@@ -1,8 +1,8 @@
 @model producto
 
 @{
-    string numero = "5493816676655";
-    string mensaje = $"Hola, quiero comprar el producto: {Model.Nombre}";
+    string numero = "5493813999608";
+    string mensaje = $"Hola, me gustaria comprar el producto {Model.Nombre}";
     string mensajeEncoded = Uri.EscapeDataString(mensaje);
 }
 
@@ -11,16 +11,20 @@
         <img src="@Model.Img" alt="">
     </figure>
     <article>
-        <h2>@Model.Nombre</h2>
-        <p>$@Model.Precio</p>
-        <a href="https://wa.me/@(numero)?text=@(mensajeEncoded)" target="_blank">
-            Comprar por WhatsApp
+        <h2 class="Chonburi">@Model.Nombre</h2>
+        <p class="Chonburi">$@Model.Precio</p>
+        <a href="https://wa.me/@(numero)?text=@(mensajeEncoded)" target="_blank" class="link-compra">
+            <figure>
+                <figcaption>Comprar por Whatsapp. Click aqui!</figcaption>
+                <img src="@Url.Content("~/imagenes/whatsappLogo.jpg")" alt="">
+            </figure>
         </a>
-        <h3>Descripcion</h3>
+        <h3 class="Chonburi">Descripcion</h3>
         <p>@Model.Descripcion</p>
         @if (ViewData["EsAdmin"] is not null && (bool)ViewData["EsAdmin"])
         {
-                <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar Producto</a>
+            <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar
+                Producto</a>
         }
     </article>
 </section>
