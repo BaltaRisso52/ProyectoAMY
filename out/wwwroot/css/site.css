@@ -64,7 +64,10 @@ footer ul {
   margin: 0 auto !important;
 }
 
-
+.Chonburi{
+  font-family: "Chonburi", serif;
+  font-weight: 900 !important;
+}
 
 footer section {
   width: 70%;
@@ -108,7 +111,7 @@ footer a img {
   padding: 0.5em !important;
   text-align: center;
   font-size: 1.3em;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Chonburi", serif;
   color: white;
   margin-top: 1em !important;
   width: 65% !important;
@@ -131,6 +134,21 @@ footer a img {
   text-align: center;
   width: 40% !important;
   margin: 1em auto !important;
+}
+
+.link-compra img{
+  width: 3.5em !important;
+}
+
+.link-compra{
+  text-decoration: none;
+  color: black;
+}
+
+.link-compra figure{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 
