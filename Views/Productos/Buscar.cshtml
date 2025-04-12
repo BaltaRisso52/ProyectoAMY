@@ -8,7 +8,14 @@
         {
             <a href="@Url.Action("Detalle", "Productos", new { id = producto.IdProducto })" class="producto">
                 <div>
-                    <img src="@producto.Img" alt="" class="zoom">
+                    @if (string.IsNullOrWhiteSpace(@producto.Img))
+                    {
+                        <img src="@Url.Content("~/imagenes/default.png")" alt="" class="zoom">
+                    }
+                    else
+                    {
+                        <img src="@producto.Img" alt="" class="zoom">
+                    }
                     <section class="color-white background-v">
                         <h3 class="Chonburi">@producto.Nombre</h3>
                         <p class="Chonburi">$@producto.Precio</p>

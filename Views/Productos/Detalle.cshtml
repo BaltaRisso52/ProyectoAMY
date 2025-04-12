@@ -8,7 +8,14 @@
 
 <section class="detalle">
     <figure class="img">
-        <img src="@Model.Img" alt="">
+        @if (string.IsNullOrWhiteSpace(@Model.Img) || @Model.Img == "default")
+        {
+            <img src="@Url.Content("~/imagenes/default.png")" alt="" class="zoom">
+        }
+        else
+        {
+            <img src="@Model.Img" alt="" class="zoom">
+        }
     </figure>
     <article>
         <h2 class="Chonburi">@Model.Nombre</h2>

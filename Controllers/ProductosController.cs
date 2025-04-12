@@ -42,13 +42,17 @@ public class ProductosController : Controller
 
         if (imagen != null && imagen.Length > 0)
         {
-
             var urlImagen = await _cloudinaryService.SubirImagenAsync(imagen);
 
             producto.Img = urlImagen;
 
-            productoRepository.crearProducto(producto);
         }
+        else
+        {
+            producto.Img = "default";
+        }
+
+        productoRepository.crearProducto(producto);
 
         return RedirectToAction("Index");
 
@@ -135,7 +139,7 @@ public class ProductosController : Controller
     {
         if (!string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
             ViewData["EsAdmin"] = true;
-        
+
         int totalProductos = productoRepository.ListarProductos().Count;
         var productos = productoRepository.ListarProductos()
             .OrderBy(p => p.Nombre) // Ordenar por nombre, puedes cambiarlo
