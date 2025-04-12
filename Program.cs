@@ -13,34 +13,35 @@ builder.Services.AddSession(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+// var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 
-string connectionString;
+string connectionString = Environment.GetEnvironmentVariable("SUPABASE_DB") 
+?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
 
-if (string.IsNullOrEmpty(databaseUrl))
-{
-    // Local con Postgres
-    connectionString = new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
-}
-else
-{
-    // Railway con Postgres
-    var uri = new Uri(databaseUrl);
-    var userInfo = uri.UserInfo.Split(':');
+// if (string.IsNullOrEmpty(databaseUrl))
+// {
+//     // Local con Postgres
+//     connectionString = new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+// }
+// else
+// {
+//     // Railway con Postgres
+//     var uri = new Uri(databaseUrl);
+//     var userInfo = uri.UserInfo.Split(':');
 
-    var builderPostgres = new Npgsql.NpgsqlConnectionStringBuilder
-    {
-        Host = uri.Host,
-        Port = uri.Port,
-        Username = userInfo[0],
-        Password = userInfo[1],
-        Database = uri.AbsolutePath.Trim('/'),
-        SslMode = Npgsql.SslMode.Require,
-        TrustServerCertificate = true
-    };
+//     var builderPostgres = new Npgsql.NpgsqlConnectionStringBuilder
+//     {
+//         Host = uri.Host,
+//         Port = uri.Port,
+//         Username = userInfo[0],
+//         Password = userInfo[1],
+//         Database = uri.AbsolutePath.Trim('/'),
+//         SslMode = Npgsql.SslMode.Require,
+//         TrustServerCertificate = true
+//     };
 
-    connectionString = builderPostgres.ToString();
-}
+//     connectionString = builderPostgres.ToString();
+// }
 
 builder.Services.AddSingleton<string>(connectionString);
 
