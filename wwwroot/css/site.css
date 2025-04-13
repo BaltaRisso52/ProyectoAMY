@@ -92,6 +92,9 @@ footer a img {
   color: black;
   margin-bottom: 1em !important;
   transition: border-bottom 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .producto:hover {

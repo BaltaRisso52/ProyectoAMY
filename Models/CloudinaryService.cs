@@ -16,6 +16,10 @@ public class CloudinaryService : ICloudinaryService
         var uploadParams = new ImageUploadParams()
         {
             File = new FileDescription(file.FileName, stream),
+            Transformation = new Transformation()
+            .AspectRatio("1:1")
+            .Crop("pad")
+            .Background("white"),
             PublicId = "producto_" + Guid.NewGuid().ToString()
         };
 
