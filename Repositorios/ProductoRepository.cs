@@ -56,6 +56,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
+                    producto.Visible = Convert.ToBoolean(reader["visible"]);
 
                 }
             }
@@ -92,6 +93,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
+                    producto.Visible = Convert.ToBoolean(reader["visible"]);
 
                     productos.Add(producto);
                 }
@@ -127,6 +129,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Descripcion = reader["descripcion"].ToString();
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
+                    producto.Visible = Convert.ToBoolean(reader["visible"]);
 
                     productos.Add(producto);
                 }
@@ -155,6 +158,30 @@ public class ProductoRepository : IProductoRepository
 
             connection.Close();
         }
+    }
+
+    public void Actualizar(ModificarProductoViewModel produc){
+
+        string consulta = @"UPDATE producto SET nombre = @nombre, descripcion = @descripcion, precio = @precio, img = @img, visible = @visible WHERE id = @id;";
+
+        using (var connection = new NpgsqlConnection(_ConnectionString))
+        {
+            connection.Open();
+
+            var command = new NpgsqlCommand(consulta, connection);
+
+            command.Parameters.AddWithValue("@nombre", produc.Nombre);
+            command.Parameters.AddWithValue("@descripcion", produc.Descripcion);
+            command.Parameters.AddWithValue("@precio", produc.Precio);
+            command.Parameters.AddWithValue("@img", produc.Img);
+            command.Parameters.AddWithValue("@visible", produc.Visible);
+            command.Parameters.AddWithValue("@id", produc.IdProducto);
+
+            command.ExecuteNonQuery();
+
+            connection.Close();
+        }
+
     }
 
 }

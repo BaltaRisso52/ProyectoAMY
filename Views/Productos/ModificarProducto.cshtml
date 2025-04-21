@@ -1,0 +1,35 @@
+@model ModificarProductoViewModel
+
+<h2 style="text-align: center;">Editar Producto</h2>
+
+<form asp-action="ModificarProductoOK" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="IdProducto" />
+    <input type="hidden" asp-for="Visible" />
+    <input type="hidden" asp-for="Img" />
+
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input class="form-control" asp-for="Nombre" required />
+        <span class="text-danger" asp-validation-for="Nombre"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripción</label>
+        <textarea class="form-control" asp-for="Descripcion" maxlength="100" style="resize: none;"></textarea>
+        <span class="text-danger" asp-validation-for="Descripcion"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Precio" class="form-label">Precio</label>
+        <input class="form-control" asp-for="Precio" required />
+        <span class="text-danger" asp-validation-for="Precio"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="imagen">Seleccionar Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();">Cancelar</button>
+</form>

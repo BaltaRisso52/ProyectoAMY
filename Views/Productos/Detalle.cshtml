@@ -32,6 +32,18 @@
         {
             <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar
                 Producto</a>
+            <a asp-action="OcultarProducto" asp-route-id="@Model.IdProducto" class="btn btn-warning btn-sm">Ocultar/Mostrar
+                Producto</a>
+            @if (@Model.Visible)
+            {
+                <button class="btn btn-sucess btn-sm">PUBLICADO</button>
+            }
+            else
+            {
+                <button class="btn btn-sucess btn-sm">OCULTO</button>
+            }
+
         }
+
     </article>
 </section>

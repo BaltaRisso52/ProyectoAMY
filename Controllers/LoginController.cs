@@ -11,47 +11,73 @@ public class LoginController : Controller
 
     public ActionResult Index()
     {
-        ViewData["IsLoginPage"] = true;
-        var model = new LoginViewModel
+        try
         {
-            Username = HttpContext.Session.GetString("User"),
-            IsAuthenticated = HttpContext.Session.GetString("IsAuthenticated") == "true"
-        };
-        return View(model);
+            ViewData["IsLoginPage"] = true;
+            var model = new LoginViewModel
+            {
+                Username = HttpContext.Session.GetString("User"),
+                IsAuthenticated = HttpContext.Session.GetString("IsAuthenticated") == "true"
+            };
+            return View(model);
+
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+        }
     }
 
     [HttpPost]
     public ActionResult Login(LoginViewModel model)
     {
-        if (string.IsNullOrEmpty(model.Username) || string.IsNullOrEmpty(model.Password))
+
+        try
         {
-            model.ErrorMessage = "Por favor ingrese su nombre de usuario y contraseña.";
-            return RedirectToAction("Index");
+            if (string.IsNullOrEmpty(model.Username) || string.IsNullOrEmpty(model.Password))
+            {
+                model.ErrorMessage = "Por favor ingrese su nombre de usuario y contraseña.";
+                return RedirectToAction("Index");
+            }
+
+            Usuarios? usuario = usuarioRepository.GetUser(model.Username, model.Password);
+
+            if (usuario != null)
+            {
+                HttpContext.Session.SetString("IsAuthenticated", "true");
+                HttpContext.Session.SetString("User", usuario.NombreUsuario);
+                HttpContext.Session.SetInt32("IdUser", usuario.Id);
+
+                return RedirectToAction("Index", "Productos");
+            }
+
+
+            model.ErrorMessage = "Credenciales Inválidas";
+            model.IsAuthenticated = false;
+            return View("Index", model);
+
         }
-
-        Usuarios? usuario = usuarioRepository.GetUser(model.Username, model.Password);
-
-        if (usuario != null)
+        catch (Exception ex)
         {
-            HttpContext.Session.SetString("IsAuthenticated", "true");
-            HttpContext.Session.SetString("User", usuario.NombreUsuario);
-            HttpContext.Session.SetInt32("IdUser", usuario.Id);
-
-            return RedirectToAction("Index", "Productos");
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
         }
-
-        
-        model.ErrorMessage = "Credenciales Inválidas";
-        model.IsAuthenticated = false;
-        return View("Index", model);
     }
 
     public IActionResult Logout()
     {
-        // Limpiar la sesión
-        HttpContext.Session.Clear();
 
-        // Redirigir a la vista de login
-        return RedirectToAction("Index");
+        try
+        {
+            // Limpiar la sesión
+            HttpContext.Session.Clear();
+
+            // Redirigir a la vista de login
+            return RedirectToAction("Index");
+
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+        }
     }
 }
