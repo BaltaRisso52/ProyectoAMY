@@ -32,15 +32,19 @@
         {
             <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar
                 Producto</a>
-            <a asp-action="OcultarProducto" asp-route-id="@Model.IdProducto" class="btn btn-warning btn-sm">Ocultar/Mostrar
+            <a asp-action="ModificarProducto" asp-route-id="@Model.IdProducto" class="btn btn-warning btn-sm">Modificar
                 Producto</a>
+            <form asp-action="OcultarProducto" asp-route-id="@Model.IdProducto" method="post"
+                class="btn btn-success btn-sm">
+                <button type="submit">Ocultar/Mostrar Producto</button>
+            </form>
             @if (@Model.Visible)
             {
-                <button class="btn btn-sucess btn-sm">PUBLICADO</button>
+                <button class="btn btn-success btn-sm">PUBLICADO</button>
             }
             else
             {
-                <button class="btn btn-sucess btn-sm">OCULTO</button>
+                <button class="btn btn-success btn-sm">OCULTO</button>
             }
 
         }
