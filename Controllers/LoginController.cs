@@ -24,7 +24,7 @@ public class LoginController : Controller
         }
         catch (Exception ex)
         {
-            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor. " + ex.ToString());
         }
     }
 
@@ -63,16 +63,38 @@ public class LoginController : Controller
         }
     }
 
+
+
     public IActionResult Logout()
     {
 
         try
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
+
             // Limpiar la sesión
             HttpContext.Session.Clear();
 
             // Redirigir a la vista de login
             return RedirectToAction("Index");
+
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+        }
+    }
+
+    public IActionResult Admin()
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
+
+            ViewData["EsAdmin"] = true;
+            return View();
 
         }
         catch (Exception ex)

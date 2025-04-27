@@ -6,22 +6,28 @@
     <div class="productos">
         @foreach (var producto in Model)
         {
-            <a href="@Url.Action("Detalle", "Productos", new { id = producto.IdProducto })" class="producto">
-                <div>
-                    @if (string.IsNullOrWhiteSpace(@producto.Img) || @producto.Img == "default")
-                    {
-                        <img src="@Url.Content("~/imagenes/default.png")" alt="" class="zoom">
-                    }
-                    else
-                    {
-                        <img src="@producto.Img" alt="" class="zoom">
-                    }
-                    <section class="color-white background-v">
-                        <h3 class="Chonburi">@producto.Nombre</h3>
-                        <p class="Chonburi">$@producto.Precio</p>
-                    </section>
-                </div>
-            </a>
+            <div class="producto">
+                <a href="@Url.Action("Detalle", "Productos", new { id = producto.IdProducto })">
+                    <div>
+                        @if (string.IsNullOrWhiteSpace(@producto.Img) || @producto.Img == "default")
+                        {
+                            <img src="@Url.Content("~/imagenes/default.png")" alt="" class="zoom">
+                        }
+                        else
+                        {
+                            <img src="@producto.Img" alt="" class="zoom">
+                        }
+                        <section>
+                            <h3 class="Chonburi">@producto.Nombre</h3>
+                            <p class="Chonburi">$@producto.Precio</p>
+                        </section>
+
+                    </div>
+                </a>
+                <button class="btn btn-primary btn-agregar-carrito carrito-absolute" data-id="@producto.IdProducto">
+                    <i class="bi bi-cart-plus fs-5"></i>
+                </button>
+            </div>
         }
     </div>
 

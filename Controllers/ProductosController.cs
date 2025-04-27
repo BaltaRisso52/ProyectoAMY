@@ -56,16 +56,20 @@ public class ProductosController : Controller
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
                 return RedirectToAction("Index", "Login");
 
+            ViewData["EsAdmin"] = true;
+
             if (imagen != null && imagen.Length > 0)
             {
-                var urlImagen = await _cloudinaryService.SubirImagenAsync(imagen);
+                var Imagen = await _cloudinaryService.SubirImagenAsync(imagen);
 
-                producto.Img = urlImagen;
+                producto.Img = Imagen.Url;
+                producto.PublicId = Imagen.PublicId;
 
             }
             else
             {
                 producto.Img = "default";
+                producto.PublicId = "default";
             }
 
             productoRepository.crearProducto(producto);
@@ -115,6 +119,8 @@ public class ProductosController : Controller
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
                 return RedirectToAction("Index", "Login");
 
+            ViewData["EsAdmin"] = true;
+
 
             producto model = productoRepository.obtenerProductoPorId(IdProducto);
 
@@ -122,7 +128,7 @@ public class ProductosController : Controller
             {
                 return NotFound();
             }
-
+            _cloudinaryService.EliminarImagen(model.PublicId);
             productoRepository.eliminarProductoPorId(IdProducto);
 
             return RedirectToAction("Index");
@@ -187,7 +193,7 @@ public class ProductosController : Controller
             ViewData["PaginaActual"] = pagina;
             ViewData["TotalPaginas"] = (int)Math.Ceiling(totalProductos / (double)tamanoPagina);
 
-            return View(productos);
+            return View("ListaProductos", productos);
 
         }
         catch (Exception ex)
@@ -229,7 +235,7 @@ public class ProductosController : Controller
         }
         catch (Exception ex)
         {
-            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor. " + ex.ToString());
         }
     }
 
@@ -237,78 +243,147 @@ public class ProductosController : Controller
     public IActionResult OcultarProducto(int id)
     {
 
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
-            return RedirectToAction("Index", "Login");
-
-        var producto = productoRepository.obtenerProductoPorId(id);
-
-        if (producto is null)
+        try
         {
-            return NotFound();
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
+
+            ViewData["EsAdmin"] = true;
+
+            var producto = productoRepository.obtenerProductoPorId(id);
+
+            if (producto is null)
+            {
+                return NotFound();
+            }
+
+            ModificarProductoViewModel model = new ModificarProductoViewModel
+            {
+                IdProducto = producto.IdProducto,
+                Nombre = producto.Nombre,
+                Descripcion = producto.Descripcion,
+                Precio = producto.Precio,
+                Img = producto.Img,
+                Visible = false,
+                PublicId = producto.PublicId
+            };
+
+            if (!producto.Visible)
+            {
+                model.Visible = true;
+            }
+
+            productoRepository.Actualizar(model); // guardá el cambio en la DB
+
+            return RedirectToAction("Detalle", new { id = producto.IdProducto });
+
         }
-
-        ModificarProductoViewModel model = new ModificarProductoViewModel
+        catch (Exception ex)
         {
-            IdProducto = producto.IdProducto,
-            Nombre = producto.Nombre,
-            Descripcion = producto.Descripcion,
-            Precio = producto.Precio,
-            Img = producto.Img,
-            Visible = false
-        };
-
-        if (!producto.Visible)
-        {
-            model.Visible = true;
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
         }
-
-        productoRepository.Actualizar(model); // guardá el cambio en la DB
-
-        return RedirectToAction("Detalle", new { id = producto.IdProducto });
     }
 
     [HttpGet]
     public IActionResult ModificarProducto(int id)
     {
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
-            return RedirectToAction("Index", "Login");
 
-        var producto = productoRepository.obtenerProductoPorId(id);
-
-        if (producto is null)
+        try
         {
-            return NotFound();
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
+
+            ViewData["EsAdmin"] = true;
+
+            var producto = productoRepository.obtenerProductoPorId(id);
+
+            if (producto is null)
+            {
+                return NotFound();
+            }
+
+            ModificarProductoViewModel model = new ModificarProductoViewModel
+            {
+                IdProducto = producto.IdProducto,
+                Nombre = producto.Nombre,
+                Descripcion = producto.Descripcion,
+                Precio = producto.Precio,
+                Img = producto.Img,
+                Visible = producto.Visible,
+                PublicId = producto.PublicId
+            };
+
+            return View(model);
+
         }
-
-        ModificarProductoViewModel model = new ModificarProductoViewModel
+        catch (Exception ex)
         {
-            IdProducto = producto.IdProducto,
-            Nombre = producto.Nombre,
-            Descripcion = producto.Descripcion,
-            Precio = producto.Precio,
-            Img = producto.Img,
-            Visible = producto.Visible
-        };
-
-        return View(model);
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+        }
     }
 
     [HttpPost]
     public async Task<IActionResult> ModificarProductoOK(ModificarProductoViewModel model, IFormFile imagen)
     {
-        if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
-            return RedirectToAction("Index", "Login");
-
-        if (imagen != null && imagen.Length > 0)
+        try
         {
-            var urlImagen = await _cloudinaryService.SubirImagenAsync(imagen);
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
 
-            model.Img = urlImagen;
+            ViewData["EsAdmin"] = true;
+
+            if (imagen != null && imagen.Length > 0)
+            {
+                var Imagen = await _cloudinaryService.SubirImagenAsync(imagen);
+
+                _cloudinaryService.EliminarImagen(model.PublicId);
+
+                model.Img = Imagen.Url;
+                model.PublicId = Imagen.PublicId;
+
+            }
+
+            productoRepository.Actualizar(model);
+
+            return RedirectToAction("Detalle", new { id = model.IdProducto });
 
         }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Ocurrió un error inesperado en el servidor.");
+        }
+    }
 
-        productoRepository.Actualizar(model);
+    [HttpGet]
+    public ActionResult ProductosOcultos(int pagina = 1, int tamanoPagina = 9)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("User")))
+                return RedirectToAction("Index", "Login");
 
-        return RedirectToAction("Detalle", new { id = model.IdProducto });
+            ViewData["EsAdmin"] = true;
+
+
+            var productosOcultos = productoRepository.ListarProductos()
+                .Where(p => !p.Visible)
+                .OrderBy(p => p.Nombre);
+
+            int totalOcultos = productosOcultos.Count();
+
+            var productosPaginados = productosOcultos
+                .Skip((pagina - 1) * tamanoPagina)
+                .Take(tamanoPagina)
+                .ToList();
+
+            ViewData["PaginaActual"] = pagina;
+            ViewData["TotalPaginas"] = (int)Math.Ceiling(totalOcultos / (double)tamanoPagina);
+
+            return View("ListaProductos", productosPaginados); // Reutilizás la misma vista
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "Error en el servidor: " + ex.ToString());
+        }
     }
 }

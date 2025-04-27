@@ -13,28 +13,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\67566894-289b-4f36-9c0a-45a9c0c7000b.jpg"
-    },
-    {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg",
-      "PackagePath": "staticwebassets\\imagenes\\7179f336-7a5b-4830-92db-79e8498f827e.jpg"
-    },
-    {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\Logo.jpg",
       "PackagePath": "staticwebassets\\imagenes\\Logo.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\agregar-carrito.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\agregar-carrito.jpg"
     },
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\bazar1.jpg",
       "PackagePath": "staticwebassets\\imagenes\\bazar1.jpg"
     },
     {
-      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\bazar2.webp",
-      "PackagePath": "staticwebassets\\imagenes\\bazar2.webp"
-    },
-    {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\buscar.png",
       "PackagePath": "staticwebassets\\imagenes\\buscar.png"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\carrito.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\carrito.jpg"
+    },
+    {
+      "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\default.png",
+      "PackagePath": "staticwebassets\\imagenes\\default.png"
     },
     {
       "Id": "D:\\proyectos\\amy\\ProyectoAMY\\wwwroot\\imagenes\\flecha-anterior.png",

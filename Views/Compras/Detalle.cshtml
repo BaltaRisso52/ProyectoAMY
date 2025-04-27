@@ -1,0 +1,19 @@
+@model List<DetalleCompra>
+<h4 class="mb-4 text-center">Productos de la Compra</h4>
+
+<div class="row historial-compras">
+    @foreach (var producto in Model)
+    {
+        <div class="detalle-compra">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="@producto.Producto.Img" class="card-img-top" alt="@producto.Producto.Nombre" />
+                <div class="card-body">
+                    <h5 class="card-title">@producto.Producto.Nombre</h5>
+                    <p class="card-text text-muted">@producto.Producto.Descripcion</p>
+                    <p class="card-text"><strong>Precio:</strong> $@producto.Producto.Precio</p>
+                    <p class="card-text"><strong>Cantidad:</strong> @producto.Cantidad</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

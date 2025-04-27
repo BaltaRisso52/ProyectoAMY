@@ -12,7 +12,7 @@ public class ProductoRepository : IProductoRepository
     
     public void crearProducto(AltaProductoViewModel producto){
         
-        string consulta = @"INSERT INTO producto (nombre, precio,descripcion, img) VALUES (@nombre, @precio, @descripcion, @img);";
+        string consulta = @"INSERT INTO producto (nombre, precio,descripcion, img, public_id) VALUES (@nombre, @precio, @descripcion, @img, @public_id);";
 
         using (var connection = new NpgsqlConnection(_ConnectionString))
         {
@@ -24,6 +24,7 @@ public class ProductoRepository : IProductoRepository
             command.Parameters.AddWithValue("@precio", producto.Precio);
             command.Parameters.AddWithValue("@descripcion", producto.Descripcion);
             command.Parameters.AddWithValue("@img", producto.Img);
+            command.Parameters.AddWithValue("@public_id", producto.PublicId);
 
             command.ExecuteNonQuery();
 
@@ -57,6 +58,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
                     producto.Visible = Convert.ToBoolean(reader["visible"]);
+                    producto.PublicId = reader["public_id"].ToString();
 
                 }
             }
@@ -94,6 +96,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
                     producto.Visible = Convert.ToBoolean(reader["visible"]);
+                    producto.PublicId = reader["public_id"].ToString();
 
                     productos.Add(producto);
                 }
@@ -130,6 +133,7 @@ public class ProductoRepository : IProductoRepository
                     producto.Precio = Convert.ToDouble(reader["precio"]);
                     producto.Img = reader["img"].ToString();
                     producto.Visible = Convert.ToBoolean(reader["visible"]);
+                    producto.PublicId = reader["public_id"].ToString();
 
                     productos.Add(producto);
                 }
@@ -162,7 +166,7 @@ public class ProductoRepository : IProductoRepository
 
     public void Actualizar(ModificarProductoViewModel produc){
 
-        string consulta = @"UPDATE producto SET nombre = @nombre, descripcion = @descripcion, precio = @precio, img = @img, visible = @visible WHERE id = @id;";
+        string consulta = @"UPDATE producto SET nombre = @nombre, descripcion = @descripcion, precio = @precio, img = @img, visible = @visible, public_id = @public_id WHERE id = @id;";
 
         using (var connection = new NpgsqlConnection(_ConnectionString))
         {
@@ -175,6 +179,7 @@ public class ProductoRepository : IProductoRepository
             command.Parameters.AddWithValue("@precio", produc.Precio);
             command.Parameters.AddWithValue("@img", produc.Img);
             command.Parameters.AddWithValue("@visible", produc.Visible);
+            command.Parameters.AddWithValue("@public_id", produc.PublicId);
             command.Parameters.AddWithValue("@id", produc.IdProducto);
 
             command.ExecuteNonQuery();

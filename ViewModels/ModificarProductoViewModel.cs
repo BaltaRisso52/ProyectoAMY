@@ -14,6 +14,8 @@ public class ModificarProductoViewModel
     public string Img { get; set; }
     [ValidateNever]
     public bool Visible { get; set; }
+    [ValidateNever]
+    public string PublicId { get; set; }
     [Required(ErrorMessage = "El precio es obligatorio.")]
     public double Precio { get; set; }
 }

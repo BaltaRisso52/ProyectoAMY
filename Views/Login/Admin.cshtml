@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Panel de Administración";
+}
+
+
+<h2 class="text-center mb-5">Panel de Administración</h2>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column justify-content-center">
+                <i class="bi bi-plus-circle display-4 mb-3 text-primary"></i>
+                <h5 class="card-title">Alta de Producto</h5>
+                <p class="card-text">Agregá nuevos productos a la tienda.</p>
+                <a asp-action="AltaProducto" asp-controller="Productos" class="btn btn-primary mt-3">Crear Producto</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column justify-content-center">
+                <i class="bi bi-bag-check display-4 mb-3 text-success"></i>
+                <h5 class="card-title">Compras</h5>
+                <p class="card-text">Visualizá y gestioná las compras realizadas.</p>
+                <a asp-action="Index" asp-controller="Compras" class="btn btn-success mt-3">Ver Compras</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm text-center">
+            <div class="card-body d-flex flex-column justify-content-center">
+                <i class="bi bi-eye-slash display-4 mb-3 text-warning"></i>
+                <h5 class="card-title">Productos Ocultos</h5>
+                <p class="card-text">Gestioná productos que no están visibles en la tienda.</p>
+                <a asp-action="ProductosOcultos" asp-controller="Productos" class="btn btn-warning mt-3">Ver Ocultos</a>
+            </div>
+        </div>
+    </div>
+</div>

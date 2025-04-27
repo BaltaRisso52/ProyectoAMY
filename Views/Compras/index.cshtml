@@ -1,0 +1,53 @@
+@model List<Compra>
+
+
+@if (Model.Any())
+{
+    
+        <h2 class="mb-4 text-center">Historial de Compras</h2>
+        <div class="row historial-compras">
+            @foreach (var compra in Model)
+            {
+                <div class="compra">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Compra #@compra.PaymentId</h5>
+                            <p class="card-text mb-1"><strong>Referencia:</strong> @compra.ExternalReference</p>
+                            <p class="card-text mb-1"><strong>Estado:</strong> @compra.Status</p>
+                            <p class="card-text mb-1"><strong>Monto:</strong> <span
+                                    class="text-success">$@compra.MontoTotal</span></p>
+                            <p class="card-text mb-3"><strong>Fecha:</strong> @compra.DateApproved?.ToString("dd/MM/yyyy HH:mm")
+                            </p>
+                            <hr />
+                            <p class="card-text mb-1"><strong>Nombre:</strong> @compra.Nombre @compra.Apellido</p>
+                            <p class="card-text mb-1"><strong>Email:</strong> @compra.Email</p>
+                            <p class="card-text mb-3"><strong>Teléfono:</strong> @compra.Telefono</p>
+                            <form asp-action="ActualizarEstado" asp-controller="Compras" method="post" class="mt-3">
+                                <input type="hidden" name="externalreference" value="@compra.ExternalReference" />
+                                <label for="nuevoEstado" class="form-label"><strong>Actualizar estado:</strong></label>
+                                <select name="nuevoEstado" class="form-select form-select-sm" onchange="this.form.submit()">
+                                    <option value="Por empaquetar" selected="@("Por empaquetar" == compra.EstadoVisible)">Por
+                                        empaquetar</option>
+                                    <option value="Empaquetado" selected="@("Empaquetado" == compra.EstadoVisible)">Empaquetado
+                                    </option>
+                                    <option value="Entregado" selected="@("Entregado" == compra.EstadoVisible)">Entregado
+                                    </option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 text-end">
+                            <a asp-action="Detalle" asp-route-id="@compra.ExternalReference"
+                                class="btn btn-outline-primary btn-sm">Ver detalle</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    
+}
+else
+{
+    <div class="alert alert-warning" style="width: 50%; margin: 1em auto !important;text-align: center;">
+        <p>No hay compras.</p>
+    </div>
+}

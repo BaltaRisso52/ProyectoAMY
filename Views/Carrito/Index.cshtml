@@ -1,0 +1,102 @@
+@model CompraViewModel
+
+@if (Model.Productos.Items.Any())
+{
+
+
+    var mensaje = "¡Hola! 👋%0AMe gustaría comprar estos productos:%0A%0A*PRODUCTOS:*%0A";
+
+    foreach (var producto in Model.Productos.Items)
+    {
+        var subtotal = producto.SubTotal;
+
+        mensaje += $"- {producto.Nombre} (Cantidad: {producto.Cantidad}) - ${producto.Precio} c/u → Subtotal: ${subtotal}%0A";
+    }
+
+    mensaje += $"%0A*TOTAL: ${Model.Productos.Total}*";
+
+    string numero = "5493813999608"; // Reemplazar por el número de destino
+    string linkWhatsApp = $"https://wa.me/{numero}?text={mensaje}";
+
+    <h2 class="my-4 text-center">Carrito</h2>
+    <button class="btn btn-danger btn-vaciar-carrito mb-3 text-center vaciar-carrito">Vaciar Carrito</button>
+
+    <div class="row historial-compras">
+        @foreach (var item in Model.Productos.Items)
+        {
+            <section class="detalle-compra" data-producto-id="@item.ProductoId">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="@item.ImagenUrl" class="card-img-top" alt="@item.Nombre" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@item.Nombre</h5>
+                        <p class="card-text mb-2"><strong>Precio:</strong> $@item.Precio</p>
+
+                        <div class="carrito-cantidad">
+                            <button class="btn btn-outline-secondary btn-sm btn-mas">+</button>
+                            <span class="cantidad fw-bold">@item.Cantidad</span>
+                            <button class="btn btn-outline-secondary btn-sm btn-menos">-</button>
+                        </div>
+
+                        <p class="card-text text-center subtotal"><strong>Subtotal:</strong> $@item.SubTotal</p>
+                        <button class="btn btn-danger btn-sm btn-eliminar-producto" data-id="@item.ProductoId">
+                            <i class="bi bi-trash"></i> <!-- Ícono de basurita -->
+                        </button>
+                    </div>
+                </div>
+            </section>
+        }
+    </div>
+    <div class="text-end mt-3">
+        <p class="fs-5 fw-bold text-center">Total: $<span id="total">@Model.Productos.Total</span></p>
+    </div>
+    <div class="compra-wsp">
+        <a href="@linkWhatsApp" target="_blank" class="btn btn-success d-inline-flex align-items-center gap-2">
+            <i class="fab fa-whatsapp fa-lg"></i> Comprar por WhatsApp
+        </a>
+    </div>
+    <form asp-controller="Pago" asp-action="CrearPreferencia" method="post"
+        class="max-w-md mx-auto mt-8 bg-white p-6 rounded-2xl shadow-md space-y-4 form-carrito">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input asp-for="DatosComprador.Nombre" class="form-control" id="Nombre" placeholder="ej: Juan" />
+            <span asp-validation-for="DatosComprador.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input asp-for="DatosComprador.Apellido" class="form-control" id="Apellido" placeholder="ej: Perez" />
+            <span asp-validation-for="DatosComprador.Apellido" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input asp-for="DatosComprador.Email" class="form-control" id="Email"
+                placeholder="ej: JuanPerez123@gmail.com" />
+            <span asp-validation-for="DatosComprador.Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Telefono">Teléfono</label>
+            <input asp-for="DatosComprador.Telefono" class="form-control" id="Telefono"
+                placeholder="ej: 3816123456 (10 dígitos)" />
+            <span asp-validation-for="DatosComprador.Telefono" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Realizar Compra con Mercado Pago</button>
+    </form>
+
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+}
+else
+{
+    <div class="alert alert-warning" style="width: 50%; margin: 1em auto !important;text-align: center;">
+        <p>El carrito esta vacio.</p>
+    </div>
+}

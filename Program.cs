@@ -1,4 +1,5 @@
 using CloudinaryDotNet;
+using MercadoPago.Config;
 using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,10 +14,8 @@ builder.Services.AddSession(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-
 string connectionString = Environment.GetEnvironmentVariable("SUPABASE_DB") 
-?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("SqliteConexion")).ToString();
+?? new NpgsqlConnectionStringBuilder(builder.Configuration.GetConnectionString("DefaultConnection")).ToString();
 
 
 builder.Services.AddSingleton<string>(connectionString);
@@ -32,6 +31,8 @@ builder.Services.AddSingleton<CloudinaryService>();
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<ICompraRepository, CompraRepository>();
+builder.Services.AddScoped<ICompraProductoRepository, CompraProductoRepository>();
 builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 
 var app = builder.Build();

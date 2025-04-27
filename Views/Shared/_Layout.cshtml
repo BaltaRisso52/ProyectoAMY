@@ -12,16 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome para el ícono de WhatsApp -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="border-bottom">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow menu-chico">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand d-sm-none d-xs-flex" asp-controller="Carrito" asp-action="Index"><img
+                        src="@Url.Content("~/imagenes/carrito.jpg")" alt="" class="btn-carrito"></a>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="flex-grow: 0;">
                     <ul class="navbar-nav flex-grow-1 Chonburi">
                         <li class="menu-item">
@@ -42,14 +47,14 @@
                                 asp-action="ListaProductos">Productos</a>
                         </li>
                         <li class="nav-item menu-item">
-                            <a class="nav-link text-dark nav-inicio" asp-area="" asp-controller=""
-                                asp-action="">Contacto</a>
+                            <a class="nav-link text-dark nav-inicio" asp-area="" asp-controller="Contacto"
+                                asp-action="Index">Contacto</a>
                         </li>
                         @if (ViewData["EsAdmin"] is not null && (bool)ViewData["EsAdmin"])
                         {
                             <li class="nav-item menu-item">
                                 <a class="nav-link text-dark nav-inicio"
-                                    href="@Url.Action("AltaProducto", "Productos")">Alta Producto</a>
+                                    href="@Url.Action("Admin", "Login")">Admin</a>
                             </li>
                         }
                     </ul>
@@ -63,7 +68,10 @@
                         name="nombre" required>
                     <button class="btn btn-outline-success" type="submit"><img
                             src="@Url.Content("~/imagenes/buscar.png")" alt="" class="buscador"></button>
+                    <a class="navbar-brand d-none d-sm-flex" asp-controller="Carrito" asp-action="Index"><img
+                            src="@Url.Content("~/imagenes/carrito.jpg")" alt="" class="btn-carrito"></a>
                 </form>
+
             </div>
 
         </nav>
@@ -84,13 +92,13 @@
                             src="@Url.Content("~/imagenes/whatsappLogo.jpg")" alt=""></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/amy.bazarydeco/?utm_source=ig_web_button_share_sheet"
+                    <a href="https://www.instagram.com/amy.bazarydeco"
                         target="_blank"><img src="@Url.Content("~/imagenes/instagramLogo.jpg")" alt=""></a>
                 </li>
             </ul>
             <figure class="ubi-footer">
                 <img src="@Url.Content("~/imagenes/ubicacion.png")" alt="">
-                <figcaption>Alderetes, Tucuman.</figcaption>
+                <figcaption>Alderetes, Tucumán, Argentina.</figcaption>
             </figure>
             <p>&copy; 2025 AMY. Todos los derechos reservados.</p>
         </section>

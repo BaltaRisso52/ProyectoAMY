@@ -1,4 +1,5 @@
 public interface ICloudinaryService
 {
-    Task<string> SubirImagenAsync(IFormFile archivo);
+    Task<GuardarImagen> SubirImagenAsync(IFormFile archivo);
+    void EliminarImagen(string publicId);
 }

@@ -2,8 +2,8 @@
 
 @{
     string numero = "5493813999608";
-    string mensaje = $"Hola, me gustaria comprar el producto {Model.Nombre}";
-    string mensajeEncoded = Uri.EscapeDataString(mensaje);
+    string mensaje = $"¡Hola! 👋%0AMe gustaría comprar el producto {Model.Nombre}";
+    string linkWhatsApp = $"https://wa.me/{numero}?text={mensaje}";
 }
 
 <section class="detalle">
@@ -20,14 +20,16 @@
     <article>
         <h2 class="Chonburi">@Model.Nombre</h2>
         <p class="Chonburi">$@Model.Precio</p>
-        <a href="https://wa.me/@(numero)?text=@(mensajeEncoded)" target="_blank" class="link-compra">
-            <figure>
-                <figcaption>Comprar por Whatsapp. Click aqui!</figcaption>
-                <img src="@Url.Content("~/imagenes/whatsappLogo.jpg")" alt="">
-            </figure>
-        </a>
+
         <h3 class="Chonburi">Descripcion</h3>
-        <p>@Model.Descripcion</p>
+        <p class="descripcion-producto" data-id="@Model.IdProducto">@Model.Descripcion</p>
+        <button class="btn btn-primary btn-agregar-carrito" data-id="@Model.IdProducto">
+            <i class="bi bi-cart-plus fs-5">Agregar al carrito</i>
+        </button>
+        <a href="@linkWhatsApp" target="_blank"
+            class="btn btn-success d-inline-flex align-items-center gap-2 padding-5">
+            <i class="fab fa-whatsapp fa-lg"></i> Comprar por WhatsApp
+        </a>
         @if (ViewData["EsAdmin"] is not null && (bool)ViewData["EsAdmin"])
         {
             <a asp-action="EliminarProducto" asp-route-id="@Model.IdProducto" class="btn btn-danger btn-sm">Eliminar

@@ -10,7 +10,7 @@ public class CloudinaryService : ICloudinaryService
         _cloudinary = cloudinary;
     }
 
-    public async Task<string> SubirImagenAsync(IFormFile file)
+    public async Task<GuardarImagen> SubirImagenAsync(IFormFile file)
     {
         await using var stream = file.OpenReadStream();
         var uploadParams = new ImageUploadParams()
@@ -25,6 +25,29 @@ public class CloudinaryService : ICloudinaryService
 
         var uploadResult = await _cloudinary.UploadAsync(uploadParams);
 
-        return uploadResult.SecureUrl.ToString();
+        GuardarImagen nueva = new GuardarImagen
+        {
+            Url = uploadResult.SecureUrl.ToString(),
+            PublicId = uploadResult.PublicId
+        };
+
+        return nueva;
     }
+
+    public void EliminarImagen(string publicId)
+    {
+        var deleteParams = new DeletionParams(publicId);
+        var resultado = _cloudinary.Destroy(deleteParams); // Elimina la imagen de Cloudinary
+
+        if (resultado.StatusCode != System.Net.HttpStatusCode.OK)
+        {
+            throw new Exception("Error al eliminar la imagen de Cloudinary");
+        }
+    }
+}
+
+public class GuardarImagen
+{
+    public string Url { get; set; }
+    public string PublicId { get; set; }
 }

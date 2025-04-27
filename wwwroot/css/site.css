@@ -64,7 +64,7 @@ footer ul {
   margin: 0 auto !important;
 }
 
-.Chonburi{
+.Chonburi {
   font-family: "Chonburi", serif;
   font-weight: 900 !important;
 }
@@ -88,13 +88,16 @@ footer a img {
 
 .producto {
   text-align: center;
-  text-decoration: none;
-  color: black;
   margin-bottom: 1em !important;
   transition: border-bottom 0.1s;
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .producto:hover {
@@ -106,7 +109,7 @@ footer a img {
 }
 
 .LogoEmprendimiento {
-  width: 7.5em ;
+  width: 7.5em;
 }
 
 .section-inicio {
@@ -133,29 +136,186 @@ footer a img {
   align-items: center;
 }
 
-.section-eliminar{
+.section-eliminar {
   text-align: center;
   width: 40% !important;
   margin: 1em auto !important;
 }
 
-.link-compra img{
+.link-compra img {
   width: 3.5em !important;
 }
 
-.link-compra{
+.link-compra {
   text-decoration: none;
   color: black;
 }
 
-.link-compra figure{
+.link-compra figure {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.btn-agregar-carrito {
+  padding: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.btn-carrito {
+  width: 2.5em !important;
+}
+
+.btn-carrito img {
+  width: 100% !important;
+}
+
+.carrito-absolute {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.btn-agregar-carrito img {
+  width: 100% !important;
+}
+
+.carrito-img{
+  width: 5em !important;
+}
+
+.form-carrito{
+  margin-top: 2em !important;
+  text-align: center;
+}
+
+.form-carrito input{
+  border: 0.1em solid black !important;
+}
+
+.form-carrito textarea{
+  border: 0.1em solid black !important;
+}
+
+.form-carrito input::placeholder {
+  text-align: center;
+}
+
+.confirmar-pago{
+  text-align: center;
+  margin: 2em auto !important;
+}
+
+.historial-compras{
+  justify-content: space-around;
+}
+
+.compra{
+  padding: 1em !important;
+  border: 0.1em solid black !important;
+  margin-top: 0.5em !important;
+}
+
+.detalle-compra{
+  padding: 1em !important;
+  border: 0.1em solid black !important;
+  margin-top: 0.5em !important;
+}
+
+.detalle-compra img{
+  width: 40% !important;
+  margin: 0 auto !important;
+}
+
+.carrito-cantidad{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.carrito-cantidad button{
+  font-size: 1.5em;
+}
+
+.vaciar-carrito{
+  margin: 0 auto !important;
+  padding: 0.5em !important;
+  display: flex;
+}
+
+.btn-eliminar-producto{
+  height: 3em !important;
+}
+
+.form-carrito button{
+  margin-top: 0.5em !important;
+  padding: 1em !important;
+}
+
+.width-6{
+  width: 6em !important;
+}
+
+.compra-wsp a{
+  padding: 0.5em !important;
+}
+
+.compra-wsp{
+  display: flex;
+  justify-content: center;
+  margin: 0.5em auto !important;
+}
+
+.padding-5{
+  padding: 0.5em !important;
+}
+
+.lista-contacto a{
+  padding: 0.5em !important;
+}
+
+
 
 @media (max-width: 576px) {
+
+  .lista-contacto{
+    width: 80% !important;
+    margin: 1em auto !important;
+  }
+
+  
+
+  .form-carrito input{
+    height: 3em !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .form-carrito textarea{
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .menu-chico{
+    width: 80% !important;
+  }
+
+  .menu-chico div{
+    justify-content: baseline;
+  }
+
+  .compra{
+    width: 90% !important;
+  }
+
+  .detalle-compra{
+    width: 90% !important;
+  }
+
+  .confirmar-pago{
+    width: 90% !important;
+  }
+
   .producto {
     width: 100%;
   }
@@ -176,12 +336,33 @@ footer a img {
     width: 100% !important;
   }
 
-  .section-eliminar{
+  .section-eliminar {
     width: 100% !important;
   }
 }
 
 @media (min-width: 576px) {
+
+  .lista-contacto{
+    width: 35% !important;
+    margin: 1em auto !important;
+  }
+
+  .compra{
+    width: 30% !important;
+  }
+
+  .detalle-compra{
+    width: 21% !important;
+  }
+
+  .confirmar-pago{
+    width: 40% !important;
+  }
+
+  .form-carrito{
+    width: 35% !important;
+  }
 
   .form {
     width: 60% !important;
@@ -219,6 +400,11 @@ footer a img {
 
   .nav-inicio:hover {
     border-bottom: 0.2em solid rgb(101, 175, 163) !important;
+  }
+
+  .tabla-carrito{
+    width: 60%;
+    margin: 0 auto !important;
   }
 }
 

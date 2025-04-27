@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Confirmar Pago";
+    string preferenceId = ViewBag.PreferenceId ?? "nada";
+}
+
+<section class="confirmar-pago">
+    <h2>Confirmar Pago</h2>
+    <p>Gracias por tu compra. Ahora podés pagar con Mercado Pago:</p>
+    <!-- Contenedor para el botón de pago -->
+    <div id="wallet_container"></div>
+</section>
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+    const publicKey = 'APP_USR-fb943da2-2259-4fe6-b8e6-59e066cdf44b';
+    const preferenceId = '@ViewBag.PreferenceId'; // 👈 Este viene desde el backend
+
+    const mp = new MercadoPago(publicKey);
+
+    mp.bricks().create("wallet", "wallet_container", {
+        initialization: {
+            preferenceId: "@ViewBag.PreferenceId", // Reemplaza con tu ID de preferencia
+        }
+    });
+</script>
