@@ -272,21 +272,6 @@ a {
   width: 95% !important;
 }
 
-.section-vista-carrito {
-  display: flex;
-  align-items: center; /* centra verticalmente el texto respecto al contenedor */
-  justify-content: space-between; /* manda el texto a la izquierda y el botón a la derecha */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.section-vista-carrito > section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra el texto dentro de su propio contenedor */
-  width: 100% !important;
-}
-
 
 @media (max-width: 576px) {
 
