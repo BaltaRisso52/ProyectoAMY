@@ -16,16 +16,17 @@
                         {
                             <img src="@producto.Img" alt="" class="zoom">
                         }
-                        <section>
-                            <h3 class="Chonburi">@producto.Nombre</h3>
-                            <p class="Chonburi">$@producto.Precio</p>
+                        <section class="section-vista-carrito">
+                            <section>
+                                <h3 class="Chonburi">@producto.Nombre</h3>
+                                <p class="Chonburi">$@producto.Precio</p>
+                            </section>
+                            <button class="btn btn-primary btn-agregar-carrito carrito-absolute" data-id="@producto.IdProducto">
+                                <i class="bi bi-cart-plus fs-5"></i>
+                            </button>
                         </section>
-
                     </div>
                 </a>
-                <button class="btn btn-primary btn-agregar-carrito carrito-absolute" data-id="@producto.IdProducto">
-                    <i class="bi bi-cart-plus fs-5"></i>
-                </button>
             </div>
         }
     </div>
