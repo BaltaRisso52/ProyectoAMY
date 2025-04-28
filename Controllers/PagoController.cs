@@ -50,9 +50,9 @@ public class PagoController : Controller
                 Items = items,
                 BackUrls = new PreferenceBackUrlsRequest
                 {
-                    Success = "https://a660-190-136-59-196.ngrok-free.app/Pago/Exito",
-                    Failure = "https://a660-190-136-59-196.ngrok-free.app/Pago/Fallo",
-                    Pending = "https://a660-190-136-59-196.ngrok-free.app/Pago/Pendiente",
+                    Success = "https://proyectoamy.onrender.com/Pago/Exito",
+                    Failure = "https://proyectoamy.onrender.com/Pago/Fallo",
+                    Pending = "https://proyectoamy.onrender.com/Pago/Pendiente",
                 },
                 AutoReturn = "approved",
                 ExternalReference = id,
@@ -62,7 +62,7 @@ public class PagoController : Controller
                     Surname = model.Apellido,
                     Email = model.Email
                 },
-                NotificationUrl = "https://a660-190-136-59-196.ngrok-free.app/Notificaciones"
+                NotificationUrl = "https://proyectoamy.onrender.com/Notificaciones"
             };
 
             Compra nueva = new Compra
